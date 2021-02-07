@@ -148,14 +148,16 @@ int main(void)
 	uint16_t Data;
 	 printf("Start application.%x\n\r",sharedmem);
 	 HAL_FLASH_Unlock();
+	 HAL_Delay(200);
 	 EE_Init();
+	 HAL_Delay(200);
 	 EE_ReadVariable(VirtAddVarTab[0], &Data);
 	 HAL_FLASH_Lock();
 	 printf("Application version:%d\n\r",Data);
 	while (1)
   {
 		HAL_IWDG_Refresh(&hiwdg);
-		printf("Start application%d",counter);
+		printf("Start application versionb(%d):%d\n\r",Data,counter);
 	 sprintf(tmpstr,"Start application%d",counter++);
 	draw_text(tmpstr,0,0 , Tahoma8, 1,0);
 	glcd_refresh();
