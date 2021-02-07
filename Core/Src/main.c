@@ -64,7 +64,7 @@
 
 /* USER CODE BEGIN PV */
 uint32_t __attribute__((section(".newsection")))  sharedmem;
-uint16_t VirtAddVarTab[NB_OF_VAR]={0,0,0};
+uint16_t VirtAddVarTab[NB_OF_VAR]={10,0,0};
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
